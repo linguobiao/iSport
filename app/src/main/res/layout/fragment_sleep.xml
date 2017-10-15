@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.isport.trackernew"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical" >
+
+         <LinearLayout
+            android:id="@+id/main_fragment_layout_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/main_fragment_text_Week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/main_fragment_text_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textColor="#BDBDBD"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+       
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="10dp" >
+
+        <com.cn.zhihengchuang.walkbank.view.TasksCompletedView
+            android:id="@+id/tasks_view"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            app:circleColor="#DBDBDB"
+            app:radius="90dp"
+            app:ringColor="#6AC328"
+            app:strokeWidth="12dp" />
+
+        <TextView
+            android:id="@+id/exercise_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="07:30"
+            android:textColor="#A8A8A8"
+            android:textSize="45sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/exercise_time"
+            android:layout_marginBottom="7dp"
+            android:layout_toRightOf="@+id/exercise_time"
+            android:gravity="bottom"
+            android:text="MIN"
+            android:visibility="gone"
+            android:textColor="#A8A8A8"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/exercise_time"
+            android:layout_centerHorizontal="true"
+            android:text="@string/target_8_hours"
+            android:textColor="#DDDCDC"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/exercise_time"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/sleep_icon" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        >
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/sleep_icon_small"
+            />
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/start_up"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="1.0" >
+
+        <com.cn.zhihengchuang.walkbank.view.BarChart03View
+            android:id="@+id/bargraph"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/exercise_no_values"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/exercise_no_values"
+            android:drawablePadding="5dp"
+            android:gravity="bottom"
+            android:paddingBottom="35dp"
+            android:text="@string/exercise_no_value"
+            android:textColor="#278CC5" />
+    </RelativeLayout>
+
+    
+
+</LinearLayout>

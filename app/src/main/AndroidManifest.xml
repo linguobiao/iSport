@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.isport.trackernew"
+    android:versionCode="43"
+    android:versionName="1.0" >
+    
+    <supports-screens 
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    
+    <!-- fir -->
+     <!-- 必选 -->
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+  <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+  <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+
+  <!-- 可选 -->
+  <uses-permission android:name="android.permission.GET_TASKS"></uses-permission>
+
+  
+    <application
+        android:name="com.cn.zhihengchuang.walkbank.activity.MyApp"
+        android:allowBackup="true"
+        android:icon="@drawable/logo_isport"
+        android:label="@string/name_isport"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name="com.lingb.splash.WelcomeActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.activity.ExerciseFragmentActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.activity.SleepFragmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.activity.MainActivityGroup"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.activity.MenuSetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.activity.OldAlarmActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.activity.ManageDeviceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.activity.OtherDeviceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.activity.BindDeviceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.activity.UnbindDeviceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.activity.CalendarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SampleTheme.Light" />
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.activity.HorizontalScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.activity.PersonalSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SampleTheme.Light" />
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.activity.UserInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.activity.ReminderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.dialogActivity.DialogTakePhoto"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent" />
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.dialogActivity.DialogSetAge"
+            android:label="@string/user_info_set_age_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/SampleTheme.Lights" />
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.dialogActivity.DialogSetTargetActivity"
+            android:label="@string/set_target_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/SampleTheme.Lights" />
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.dialogActivity.DialogSetHeight"
+            android:label="@string/user_info_set_height_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/SampleTheme.Lights" />
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.dialogActivity.DialogSetWeight"
+            android:label="@string/user_info_set_weight_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/SampleTheme.Lights" />
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.dialogActivity.DialogSetSex"
+            android:screenOrientation="portrait"
+            android:theme="@style/SampleTheme.Light" />
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.activity.W240SettingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.activity.AlarmActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.activity.LoveSportsSettingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.activity.AboutUsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.activity.DisplayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cn.zhihengchuang.walkbank.activity.SleepActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+       <activity
+            android:name="com.lingb.ride.RideMainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lingb.ride.RideSettingsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lingb.ride.settings.RideUserActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lingb.ride.settings.RideDeviceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lingb.ride.history.RideHistoryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lingb.ride.history.RideHistoryDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lingb.splash.FirstDeviceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+          <meta-data android:value="dc91e8a85eec2e8e3dbfa9cdbccf46de" android:name="BUG_HD_SDK_GENERAL_KEY" />
+        
+        
+        <service
+            android:name="com.cn.zhihengchuang.walkbank.ble.BleService"
+            android:enabled="true" />
+        
+        <service
+            android:name="com.lingb.ride.service.RideBLEService"
+            android:enabled="true" />
+
+        <receiver android:name="com.cn.zhihengchuang.walkbank.activity.call.CallReceiver" >
+            <intent-filter android:priority="100" >
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="com.android.phone.NotificationMgr.MissedCall_intent"/>
+                
+                <!-- <action android:name="com.intent.longke.nothand" /> -->   
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

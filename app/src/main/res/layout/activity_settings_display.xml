@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:switcher="http://schemas.android.com/apk/res/com.bally.pedometer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp" >
+
+        <TextView
+            android:id="@+id/return_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/iv_back"
+            android:padding="10dp"
+            android:text="@string/back"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="10dp"
+            android:text="@string/Display"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        
+        <TextView 
+            android:id="@+id/text_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="@string/save"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FF4A00" />
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:weightSum="6">
+        
+        <ToggleButton 
+            android:id="@+id/button_calories"
+            style="@style/butotn_display"
+            android:drawableTop="@drawable/selector_device_calories"/>
+        
+        <ToggleButton 
+            android:id="@+id/button_distance"
+            style="@style/butotn_display"
+            android:drawableTop="@drawable/selector_device_distance"/>
+        
+        <ToggleButton 
+            android:id="@+id/button_time"
+            style="@style/butotn_display"
+            android:drawableTop="@drawable/selector_device_time"/>
+        
+        <ToggleButton 
+            android:id="@+id/button_percent"
+            style="@style/butotn_display"
+            android:drawableTop="@drawable/selector_device_percent"/>
+        
+        <ToggleButton 
+            android:id="@+id/button_face"
+            style="@style/butotn_display"
+            android:drawableTop="@drawable/selector_device_face"/>
+        
+        <ToggleButton 
+            android:id="@+id/button_alarm"
+            style="@style/butotn_display"
+            android:drawableTop="@drawable/selector_device_alarm"/>
+    </LinearLayout>
+
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:weightSum="6">
+        
+        <ToggleButton 
+            android:id="@+id/button_sms"
+            style="@style/butotn_display"
+            android:drawableTop="@drawable/selector_device_sms"/>
+        
+        <ToggleButton 
+            android:id="@+id/button_call"
+            style="@style/butotn_display"
+            android:drawableTop="@drawable/selector_device_call"/>
+        
+    </LinearLayout>
+    
+</LinearLayout>
