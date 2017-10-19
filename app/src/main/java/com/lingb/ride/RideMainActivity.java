@@ -1,28 +1,5 @@
 package com.lingb.ride;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import com.cn.zhihengchuang.walkbank.activity.MyApp;
-import com.cn.zhihengchuang.walkbank.ble.BleService;
-import com.cn.zhihengchuang.walkbank.ble.ParserLoader;
-import com.cn.zhihengchuang.walkbank.util.DialogHelper;
-import com.isport.trackernew.R;
-import com.lingb.global.Global;
-import com.lingb.helper.ParserHelper;
-import com.lingb.helper.SpHelper;
-import com.lingb.helper.TimerHelper;
-import com.lingb.helper.ViewHelper;
-import com.lingb.ride.bean.Profile;
-import com.lingb.ride.bean.Ride;
-import com.lingb.ride.database.DatabaseProvider;
-import com.lingb.ride.history.RideHistoryActivity;
-import com.lingb.ride.service.RideBLEService;
-import com.lingb.ride.settings.RideDeviceActivity;
-import com.lingb.ride.settings.RideUserActivity;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -41,14 +18,38 @@ import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-public class RideMainActivity extends Activity {
+import com.cn.zhihengchuang.walkbank.activity.MyApp;
+import com.cn.zhihengchuang.walkbank.ble.BleService;
+import com.cn.zhihengchuang.walkbank.ble.ParserLoader;
+import com.cn.zhihengchuang.walkbank.util.DialogHelper;
+import com.isport.trackernew.R;
+import com.lingb.global.BaseActivity;
+import com.lingb.global.Global;
+import com.lingb.helper.ParserHelper;
+import com.lingb.helper.SpHelper;
+import com.lingb.helper.TimerHelper;
+import com.lingb.helper.ViewHelper;
+import com.lingb.ride.bean.Profile;
+import com.lingb.ride.bean.Ride;
+import com.lingb.ride.database.DatabaseProvider;
+import com.lingb.ride.history.RideHistoryActivity;
+import com.lingb.ride.service.RideBLEService;
+import com.lingb.ride.settings.RideDeviceActivity;
+import com.lingb.ride.settings.RideUserActivity;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class RideMainActivity extends BaseActivity {
 
 	private final int USELESS_MIN_VALUE = 100000;
 

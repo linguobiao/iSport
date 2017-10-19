@@ -1,6 +1,5 @@
 package com.lingb.splash;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,12 +13,13 @@ import com.cn.zhihengchuang.walkbank.activity.MainActivityGroup;
 import com.cn.zhihengchuang.walkbank.activity.MyApp;
 import com.cn.zhihengchuang.walkbank.ble.BleService;
 import com.isport.trackernew.R;
+import com.lingb.global.BaseActivity;
 import com.lingb.global.Global;
 import com.lingb.helper.SpHelper;
 import com.lingb.ride.RideMainActivity;
 import com.lingb.ride.service.RideBLEService;
 
-public class WelcomeActivity extends Activity {
+public class WelcomeActivity extends BaseActivity {
 	private Animation myAnimation_Alpha;
 	private View view;
 
@@ -28,7 +28,6 @@ public class WelcomeActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		view = getLayoutInflater().inflate(R.layout.activity_welcome, null);
 		setContentView(view);
-		SpHelper.putInt(Global.KEY_DEVICE, Global.TYPE_DEVICE_RIDE);
 		initUI();
 		setAnimation();
 		

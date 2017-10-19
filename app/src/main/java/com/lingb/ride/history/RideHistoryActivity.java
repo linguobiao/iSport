@@ -1,21 +1,5 @@
 package com.lingb.ride.history;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-
-import com.cn.zhihengchuang.walkbank.util.DialogHelper;
-import com.isport.trackernew.R;
-import com.lingb.ride.adapter.HistoryItemAdapter;
-import com.lingb.ride.bean.Ride;
-import com.lingb.ride.database.DatabaseProvider;
-import com.lingb.swipelistview.SwipeMenu;
-import com.lingb.swipelistview.SwipeMenuCreator;
-import com.lingb.swipelistview.SwipeMenuItem;
-import com.lingb.swipelistview.SwipeMenuListView;
-import com.lingb.swipelistview.SwipeMenuListView.OnMenuItemClickListener;
-import com.lingb.swipelistview.SwipeMenuListView.OnSwipeListener;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
@@ -29,10 +13,27 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.TextView;
 import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.TextView;
 
-public class RideHistoryActivity extends Activity {
+import com.cn.zhihengchuang.walkbank.util.DialogHelper;
+import com.isport.trackernew.R;
+import com.lingb.global.BaseActivity;
+import com.lingb.ride.adapter.HistoryItemAdapter;
+import com.lingb.ride.bean.Ride;
+import com.lingb.ride.database.DatabaseProvider;
+import com.lingb.swipelistview.SwipeMenu;
+import com.lingb.swipelistview.SwipeMenuCreator;
+import com.lingb.swipelistview.SwipeMenuItem;
+import com.lingb.swipelistview.SwipeMenuListView;
+import com.lingb.swipelistview.SwipeMenuListView.OnMenuItemClickListener;
+import com.lingb.swipelistview.SwipeMenuListView.OnSwipeListener;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+public class RideHistoryActivity extends BaseActivity {
 
 	public static final int REQUEST_CODE_HISTORY_DETAIL = 111;
 

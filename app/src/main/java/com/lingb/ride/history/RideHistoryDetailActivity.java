@@ -1,26 +1,24 @@
 package com.lingb.ride.history;
 
-import com.cn.zhihengchuang.walkbank.util.DialogHelper;
-import com.isport.trackernew.R;
-import com.lingb.global.Global;
-import com.lingb.helper.ViewHelper;
-import com.lingb.ride.RideMainActivity;
-import com.lingb.ride.bean.Profile;
-import com.lingb.ride.bean.Ride;
-import com.lingb.ride.database.DatabaseProvider;
-import com.lingb.ride.settings.RideUserActivity;
-
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-public class RideHistoryDetailActivity extends Activity {
+import com.cn.zhihengchuang.walkbank.util.DialogHelper;
+import com.isport.trackernew.R;
+import com.lingb.global.BaseActivity;
+import com.lingb.global.Global;
+import com.lingb.helper.ViewHelper;
+import com.lingb.ride.bean.Profile;
+import com.lingb.ride.bean.Ride;
+import com.lingb.ride.database.DatabaseProvider;
+import com.lingb.ride.settings.RideUserActivity;
+
+public class RideHistoryDetailActivity extends BaseActivity {
 	
 	private int position = 0;
 	private int unitType = Global.TYPE_UNIT_METRIC;

@@ -62,7 +62,7 @@
 	<string name="ride_Connected">Connected</string>
 	<string name="ride_Add_a_new_device">Add a new device</string>
 	<string name="ride_Version">Version</string>
-	<string name="ride_Keep_Screen_On">Keep Screen On</string>
+	<string name="ride_Keep_Screen_On">Keep Screen ON</string>
 
 	<string name="ride_Put_down_to_refresh">pull down to refresh</string>
 	<string name="ride_Searching">Searching…</string>

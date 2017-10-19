@@ -1,26 +1,5 @@
 package com.lingb.ride.settings;
 
-import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import com.cn.zhihengchuang.walkbank.activity.MainActivityGroup;
-import com.cn.zhihengchuang.walkbank.activity.MyApp;
-import com.cn.zhihengchuang.walkbank.ble.BleService;
-import com.cn.zhihengchuang.walkbank.entity.DeviceEntity;
-import com.cn.zhihengchuang.walkbank.util.DialogHelper;
-import com.cn.zhihengchuang.walkbank.util.TimerHelper;
-import com.isport.trackernew.R;
-import com.lingb.global.Global;
-import com.lingb.helper.ParserHelper;
-import com.lingb.helper.SpHelper;
-import com.lingb.helper.StringHelper;
-import com.lingb.ride.RideMainActivity;
-import com.lingb.ride.adapter.MyListView;
-import com.lingb.ride.adapter.MyListView.OnRefreshListener;
-import com.lingb.ride.service.RideBLEService;
-import com.lingb.splash.FirstDeviceAdapter;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -36,19 +15,38 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
-import android.view.ContextThemeWrapper;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.TextView;
 
-public class RideDeviceActivity extends Activity {
+import com.cn.zhihengchuang.walkbank.activity.MainActivityGroup;
+import com.cn.zhihengchuang.walkbank.activity.MyApp;
+import com.cn.zhihengchuang.walkbank.ble.BleService;
+import com.cn.zhihengchuang.walkbank.entity.DeviceEntity;
+import com.cn.zhihengchuang.walkbank.util.DialogHelper;
+import com.cn.zhihengchuang.walkbank.util.TimerHelper;
+import com.isport.trackernew.R;
+import com.lingb.global.BaseActivity;
+import com.lingb.global.Global;
+import com.lingb.helper.ParserHelper;
+import com.lingb.helper.SpHelper;
+import com.lingb.helper.StringHelper;
+import com.lingb.ride.adapter.MyListView;
+import com.lingb.ride.adapter.MyListView.OnRefreshListener;
+import com.lingb.ride.service.RideBLEService;
+import com.lingb.splash.FirstDeviceAdapter;
+
+import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class RideDeviceActivity extends BaseActivity {
 
 	private final int HANDLER_SCAN_TIMEOUT = 111;
 	private final int HANDLER_FOUND_DEVICE = 112;

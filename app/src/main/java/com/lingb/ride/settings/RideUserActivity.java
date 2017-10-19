@@ -1,19 +1,25 @@
 package com.lingb.ride.settings;
 
-import java.math.BigDecimal;
-import java.text.ParseException;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import kankan.wheel.widget.WheelView;
-import kankan.wheel.widget.adapters.ArrayWheelAdapter;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnFocusChangeListener;
+import android.view.View.OnTouchListener;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cn.zhihengchuang.walkbank.activity.MyApp;
 import com.isport.trackernew.R;
+import com.lingb.global.BaseActivity;
 import com.lingb.global.Global;
 import com.lingb.helper.CalculateHelper;
 import com.lingb.helper.KeyBoardHelper;
@@ -26,26 +32,17 @@ import com.lingb.ride.bean.Profile;
 import com.lingb.ride.database.DatabaseProvider;
 import com.lingb.splash.FirstDeviceActivity;
 
-import android.app.Activity;
-import android.app.Dialog;
-import android.content.Context;
-import android.content.Intent;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.View.OnFocusChangeListener;
-import android.view.View.OnTouchListener;
-import android.view.ViewDebug.HierarchyTraceType;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
-import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
+import java.math.BigDecimal;
+import java.text.ParseException;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
 
-public class RideUserActivity extends Activity {
+import kankan.wheel.widget.WheelView;
+import kankan.wheel.widget.adapters.ArrayWheelAdapter;
+
+public class RideUserActivity extends BaseActivity {
 	
 	public static final String DEF_NAME = "NAME";
 	private final int DEF_UNIT = Global.TYPE_UNIT_METRIC;

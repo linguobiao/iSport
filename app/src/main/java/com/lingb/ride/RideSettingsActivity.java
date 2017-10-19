@@ -1,7 +1,24 @@
 package com.lingb.ride;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup.LayoutParams;
+import android.view.WindowManager;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
 import com.cn.zhihengchuang.walkbank.activity.MyApp;
 import com.isport.trackernew.R;
+import com.lingb.global.BaseActivity;
 import com.lingb.global.Global;
 import com.lingb.helper.SpHelper;
 import com.lingb.helper.StringHelper;
@@ -9,22 +26,7 @@ import com.lingb.ride.service.RideBLEService;
 import com.lingb.ride.settings.RideDeviceActivity;
 import com.lingb.ride.settings.RideUserActivity;
 
-import android.app.Activity;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager.NameNotFoundException;
-import android.graphics.Color;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.ViewGroup.LayoutParams;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-
-public class RideSettingsActivity extends Activity {
+public class RideSettingsActivity extends BaseActivity {
 
 	public static final int REQUEST_CODE_DEVICE = 111;
 	private final String KEY_BATTERY_RIDE = "KEY_BATTERY_RIDE";
@@ -35,6 +37,7 @@ public class RideSettingsActivity extends Activity {
 		initUI();
 		initReceiver();
 		initVersion();
+		initScreen();
 	}
 
 	@Override
@@ -116,6 +119,15 @@ public class RideSettingsActivity extends Activity {
 		}
 	};
 
+	private CompoundButton.OnCheckedChangeListener onCheckedChangeListener = new CompoundButton.OnCheckedChangeListener() {
+		@Override
+		public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+			SpHelper.putBoolean(Global.KEY_KEEP_SCREEN_ON, b);
+			if (b) getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+			else getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+		}
+	};
+
 	/**
 	 * myBroadcastReceiver
 	 */
@@ -178,6 +190,11 @@ public class RideSettingsActivity extends Activity {
 		}
 	}
 
+	private void initScreen() {
+		boolean isKeepOn = SpHelper.getBoolean(Global.KEY_KEEP_SCREEN_ON, false);
+		cb_screen.setChecked(isKeepOn);
+	}
+
 	private void initUI() {
 		TextView text_back = (TextView) findViewById(R.id.text_back);
 		text_back.setOnClickListener(myOnClickListener);
@@ -195,7 +212,10 @@ public class RideSettingsActivity extends Activity {
 		width = image_battery.getLayoutParams().width;
 		height  = image_battery.getLayoutParams().height;
 		layout_battery = (RelativeLayout) findViewById(R.id.layout_battery);
-		}
+
+		cb_screen = (CheckBox) findViewById(R.id.cb_screen);
+		cb_screen.setOnCheckedChangeListener(onCheckedChangeListener);
+	}
 	
 	private int width, height;
 
@@ -203,6 +223,7 @@ public class RideSettingsActivity extends Activity {
 	private TextView text_version;
 	private ImageView image_battery;
 	private RelativeLayout layout_battery;
+	private CheckBox cb_screen;
 	
 
 }
